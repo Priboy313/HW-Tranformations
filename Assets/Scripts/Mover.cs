@@ -1,15 +1,15 @@
 using UnityEngine;
 
-public class SphereTransformations : MonoBehaviour
+public class Mover : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;
 
     private void FixedUpdate()
     {
-        Moving();
+        MoveSelf();
     }
 
-    private void Moving()
+    private void MoveSelf()
     {
         transform.position += transform.forward * _moveSpeed * Time.fixedDeltaTime;
     }
